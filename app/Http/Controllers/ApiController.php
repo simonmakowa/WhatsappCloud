@@ -12,10 +12,10 @@ class ApiController extends Controller
         $data = $request->all();
         $challenge=$request->hub_challenge;
         $dataToSTring = json_encode($data);
-        Webhook::create([
-            'webhook' => $dataToSTring,
-            'type' => '123'
-        ]);
+//        Webhook::create([
+//            'webhook' => $dataToSTring,
+//            'type' => '123'
+//        ]);
         return response ($challenge, 200);
     }
 }
